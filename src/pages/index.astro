@@ -1,0 +1,295 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Tarjeta2 from '../components/Tarjeta2.astro';
+import CaruselItem from '../components/CaruselItem.astro';
+import "../styles/estilos_principales.scss"
+import "../styles/estilos_mobil.scss"
+---
+
+<Layout title="Morthlet" descripcion="Página de inicio" palabras="hola">
+	<main >
+		<!-- Sección Principal -->
+		<section class= "principal container-fluid text-center position-relative" id="arriba">
+			
+			<div class="row">
+
+				<div class ="col-12 banner" > <!--quité clase "limitado"-->
+					<!--<div class="parallax position-absolute"></div>-->
+					
+					<!--
+					<img src= "/public/principal1.png" alt="Imagen de fondo para ejemplo" width="100%" id="imagenPrincipal">
+					-->
+					<div class="logo position-absolute top-50 start-50 translate-middle">
+						<img src= "/public/logo.png" alt="Imagen de fondo para ejemplo" width="35%" id="Logotipo">
+						<p>DYNAMIC. <span>MINIMALIST.</span> PROFESSIONAL.</p>		
+					</div>		
+				</div>
+
+				<div class="gradienteNegro"></div>
+			</div>
+			
+
+		</section>
+			
+		<!-- Sección Sobre mí -->
+		<!-- Cómo hacer un botón debajoí -->
+		<!-- <a href="/contacto" class="boton"> Biografía </a>-->
+		<section class="aboutme position-relative pt-1 pb-1">
+			<div class="row justify-content-md-center m-0">
+				<div class ="sobreMi col-lg-5 col-md-12 text-center" data-aos="fade-left">
+					<h4>¡BIENVENIDO!</h4>
+					<br>
+					<p id="presentacion">Mi nombre es Omar Rangel y soy Licenciado en
+						Artes Digitales apasionado por el diseño 3D y la
+						fotografía.</p>
+
+						<br>
+						<br>
+
+							<svg height="30px" width="100%">
+								<line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgb(255,255,255);stroke-width:4;text-align:center;" />
+							</svg>
+
+					<p id="explicacion">
+						Morthlet is <span>mo</span>re <span>th</span>an <span>let</span>ters!
+						<br>
+						<br>
+						<span>Morthlet</span> es mi marca personal. Nace del sueño de crear, innovar y
+						condensar mi pensamiento artístico a la realidad. <span>Soy un
+						profesional que cuida</span> en extremo <span>los detalles</span>, pues son estos los
+						que marcan la diferencia.
+						<br>
+						<br>
+						Me desenvuelvo en todas de las áreas del arte digital con
+						especialidad en <span>diseño gráfico, modelado 3D y fotografía.</span>
+					</p>
+
+					<br>
+					<a class="botonGaleria" href="#" role="button">Ir a Galería</a>
+				</div>
+
+				<div class ="retrato col-lg-5 col-md-8 col-sm-8 text-center" data-aos="fade-right" >
+					<br>
+					<img src= "/public/sobreMi.png" alt="¡Este soy yo!" width="90%">
+				</div>
+			</div>
+		</section>
+		
+		<!-- Sección Frase -->
+		<section class= "fraseUno container-fluid text-center position-relative" >
+			<div class="row">
+				<div class ="col-lg-12 p-0 position-relative" style="height: 100%;">
+					<img src= "/public/frase1.png" alt="Menos es más" width="100%">	
+				</div>
+			</div>
+		</section>
+
+		<!-- Sección Servicios -->
+		<section class= "servicios container-fluid position-relative" >
+			<div class="infoServicios" data-aos="fade-down">
+				<!-- Titular e información -->
+				<h1>SERVICIOS</h1>
+				<p>Descubre las cosas que puedo hacer por tí:</p>
+			</div>
+			<!-- Primera fila -->
+			<div class="row primeraFila justify-content-md-center m-0"  >
+				<div class ="elementoS col-lg-3 col-sm-8 justify-content-md-center p-0 m-0" >
+					<div class="row" data-aos="zoom-out-right">
+						<div class ="col-md-3 text-center align-self-center">
+							<img src= "/public/favicon.svg" width="100%" class="iconosS">	
+						</div>
+						<div class ="cuadro S col-md-9">
+							<h2>Sesión Fotográfica</h2> 
+							<br>
+							<p>Sesión casual o con luces de estudio. 12
+							fotografías digitales con dos atuendos y
+							aditamentos.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class ="elementoS col-lg-3 col-sm-8 justify-content-md-center p-0 m-0">
+					<div class="row" data-aos="zoom-out">
+						<div class ="col-md-3 text-center align-self-center">
+							<img src= "/public/favicon.svg" width="100%" class="iconosS">	
+						</div>
+						<div class ="cuadro S col-md-9">
+							<h2>Sesión Fotográfica</h2> 
+							<br>
+							<p>Sesión casual o con luces de estudio. 12
+							fotografías digitales con dos atuendos y
+							aditamentos.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class ="elementoS col-lg-3 col-sm-8 justify-content-md-center p-0 m-0">
+					<div class="row" data-aos="zoom-out-left">
+						<div class ="col-md-3 text-center align-self-center">
+							<img src= "/public/favicon.svg" width="100%" class="iconosS">	
+						</div>
+						<div class ="cuadro S col-md-9">
+							<h2>Sesión Fotográfica</h2> 
+							<br>
+							<p>Sesión casual o con luces de estudio. 12
+							fotografías digitales con dos atuendos y
+							aditamentos.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Segunda fila -->
+			<div class="row segundaFila justify-content-md-center m-0">
+				<div class ="elementoS col-lg-3 col-sm-8 justify-content-md-center p-0 m-0">
+					<div class="row" data-aos="zoom-out-right" data-aos-offset="250">
+						<div class ="col-md-3 text-center align-self-center">
+							<img src= "/public/favicon.svg" width="100%" class="iconosS">	
+						</div>
+						<div class ="cuadro S col-md-9">
+							<h2>Sesión Fotográfica</h2> 
+							<br>
+							<p>Sesión casual o con luces de estudio. 12
+							fotografías digitales con dos atuendos y
+							aditamentos.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class ="elementoS col-lg-3 col-sm-8 justify-content-md-center p-0 m-0">
+					<div class="row" data-aos="zoom-out" data-aos-offset="250">
+						<div class ="col-md-3 text-center align-self-center">
+							<img src= "/public/favicon.svg" width="100%" class="iconosS">	
+						</div>
+						<div class ="cuadro S col-md-9">
+							<h2>Sesión Fotográfica</h2> 
+							<br>
+							<p>Sesión casual o con luces de estudio. 12
+							fotografías digitales con dos atuendos y
+							aditamentos.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class ="elementoS col-lg-3 col-sm-8 justify-content-md-center p-0 m-0">
+					<div class="row" data-aos="zoom-out-left" data-aos-offset="250">
+						<div class ="col-md-3 text-center align-self-center">
+							<img src= "/public/favicon.svg" width="100%" class="iconosS">	
+						</div>
+						<div class ="cuadro S col-md-9">
+							<h2>Sesión Fotográfica</h2> 
+							<br>
+							<p>Sesión casual o con luces de estudio. 12
+							fotografías digitales con dos atuendos y
+							aditamentos.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sección Descargas -->
+		<section class= "descargas container-fluid position-relative" >
+			<div class="infoDescargas" data-aos="fade-down">
+				<!-- Titular e información -->
+				<h1>DESCARGAS</h1>
+				<p>Descarga fondos de pantalla y contenido adicional completamente gratis:</p>
+			</div>
+			<!-- Primera fila -->
+			<div class="row justify-content-md-center m-0">
+				<div class ="elementoD col-lg-12 col-md-10 justify-content-md-center">
+					<div class="row justify-content-md-center">
+						<div class ="col-md-3 text-center" data-aos="zoom-out" data-aos-offset="100"> <!--  align-items-flex-end -->
+							<h3>Fondo de pantalla 1</h3>
+							<p>Técnica: Ilustración digital</p>	
+							<img src="/public/Ilustración genérica 1.jpg" width="70%">
+							<p>Inserte aquí una descripción breve</p>	
+						</div>
+						<div class ="col-md-3 text-center" data-aos="zoom-out" data-aos-offset="200">
+							<h3>Fondo de pantalla 1</h3>
+							<p>Técnica: Ilustración digital</p>	
+							<img src="/public/Ilustración genérica 1.jpg" width="70%">
+							<p>Inserte aquí una descripción breve</p>	
+						</div>
+						<div class ="col-md-3 text-center" data-aos="zoom-out" data-aos-offset="400">
+							<h3>Fondo de pantalla 1</h3>
+							<p>Técnica: Ilustración digital</p>	
+							<img src="/public/Ilustración genérica 1.jpg" width="70%">
+							<p>Inserte aquí una descripción breve</p>	
+						</div>
+						<div class ="col-md-3 text-center" data-aos="zoom-out" data-aos-offset="500">
+							<h3>Fondo de pantalla 1</h3>
+							<p>Técnica: Ilustración digital</p>	
+							<img src="/public/Ilustración genérica 1.jpg" width="70%">
+							<p>Inserte aquí una descripción breve</p>	
+						</div>
+					</div>
+					<!-- Segunda Fila -->
+					<div class="row segundaFila">
+						<div class ="col-md-3 text-center p-0 m-0" data-aos="zoom-out" data-aos-offset="100">
+							<h3>Recurso extra 1</h3>
+							<p>Técnica: Ilustración digital</p>	
+							<img src="/public/Recurso genérico 1.jpg" width="70%">
+							<p>Inserte aquí una descripción breve</p>	
+						</div>
+						<div class ="col-md-3 text-center p-0 m-0" data-aos="zoom-out" data-aos-offset="200">
+							<h3>Recurso extra 1</h3>
+							<p>Técnica: Ilustración digital</p>	
+							<img src="/public/Recurso genérico 1.jpg" width="70%">
+							<p>Inserte aquí una descripción breve</p>	
+						</div>
+						<div class ="col-md-3 text-center p-0 m-0" data-aos="zoom-out" data-aos-offset="300">
+							<h3>Recurso extra 1</h3>
+							<p>Técnica: Ilustración digital</p>	
+							<img src="/public/Recurso genérico 1.jpg" width="70%">
+							<p>Inserte aquí una descripción breve</p>	
+						</div>
+						<div class ="col-md-3 text-center p-0 m-0" data-aos="zoom-out" data-aos-offset="400">
+							<h3>Recurso extra 1</h3>
+							<p>Técnica: Ilustración digital</p>	
+							<img src="/public/Recurso genérico 1.jpg" width="70%">
+							<p>Inserte aquí una descripción breve</p>	
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+		</section>
+
+
+
+		<!--Carrusel-->
+		<!--
+		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img src="/carusel-1.jpg" class="d-block w-100" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="/carusel-2.jpg" class="d-block w-100" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="/carusel-3.jpg" class="d-block w-100" alt="...">
+			  </div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+		  </div>
+		-->
+		  
+		<!--Cuadros de información-->
+
+
+		<!--Offcanvas-->
+
+	</main>
+</Layout>

@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+---
+
+<Layout title="Morthlet" descripcion="hola" palabras="gg">
+	<main>
+
+		<h1>Échale un vistazo a mi<span class="text-gradient"> Galería</span></h1>
+		<p class="instructions">
+			Estoy haciendo mi primera práctica de Diseño Web Flexible<br />
+			<strong>Instrucciones:</strong> Experimentar con los componentes de Bootstrap 5 y crear una maquetación sencilla.
+		</p>
+
+		<!--Probando Grid de Bootstrap -->
+		<div class="container text-center">
+			<div class="row">
+			  <div class="col">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			  </div>
+			  <div class="col">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			  </div>
+			  <div class="col">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			  </div>
+			</div>
+		  </div>
+		  
+
+		<!--Galería -->
+		<div class="galeria">
+			<div class="row">
+				<div class="column">
+				<img src="/galeria-1.jpg" alt="Multi" style="width:100%">
+				</div>
+				<div class="column">
+				<img src="/galeria-2.jpg" alt="Forest" style="width:100%">
+				</div>
+				<div class="column">
+				<img src="/galeria-3.jpg" alt="Mountains" style="width:100%">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column">
+				<img src="/galeria-4.jpg" alt="Snow" style="width:100%">
+				</div>
+				<div class="column">
+				<img src="/galeria-5.jpg" alt="Forest" style="width:100%">
+				</div>
+				<div class="column">
+				<img src="/galeria-6.jpg" alt="Mountains" style="width:100%">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column">
+				<img src="/galeria-7.jpg" alt="Snow" style="width:100%">
+				</div>
+				<div class="column">
+				<img src="/galeria-8.jpg" alt="Forest" style="width:100%">
+				</div>
+				<div class="column">
+				<img src="/galeria-9.jpg" alt="Mountains" style="width:100%">
+				</div>
+			</div>
+		</div>
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 80%;
+	}
+	h1 {
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 350%;
+		background-position: 0%;
+	}
+	.instructions {
+		text-align: center;
+		line-height: 1.4;
+		margin: 1rem 0;
+		border: 5px solid rgba(var(--accent), 25%);
+		/*background-color: white;*/
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+	.intro{
+		background-image: url("/face-bg.jpg");
+		/*background-color: #cccccc;*/
+		height: 500px;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.logo{
+		padding: 100px 0px 0px;
+		display: block;
+		text-align: center;
+	}
+	.carousel {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		width: 800px;
+	}
+	.galeria .row:after
+	{
+		content: "";
+		clear: both;
+		display: table;
+	}
+	.galeria .column{
+		float: left;
+		width: 33.33%;
+		padding: 5px;
+	}
+
+	
+</style>

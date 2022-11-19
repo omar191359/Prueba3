@@ -1,0 +1,171 @@
+---
+//Eliminar al incorporar sass
+//import "bootstrap/dist/css/bootstrap.min.css"
+
+import "../styles/estilos_principales.scss"
+import "../styles/estilos_mobil.scss"
+
+export interface Props {
+	title: string;
+	palabras: string;
+	descripcion: string;
+}
+
+const { title, palabras, descripcion } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<!--Gradiente-->
+	<div id="Gradiente"></div>
+	<!--Header-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={descripcion} />
+		<meta name="keywords" content={palabras} />
+		<meta name="author" content="Omar" />
+		<title>{title}</title>
+		<script src="https://kit.fontawesome.com/398b08d3d7.js" crossorigin="anonymous"></script>
+
+		<!--Opción AOS para animaciones al scrollear-->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
+	</head>
+
+	<!--Body-->
+	<body>	
+		
+		<!--NavBar-->
+		<nav class="navbar navbar-expand-sm position-fixed sticky-top container-fluid" >
+		<div class="gradiente position-fixed sticky-top ">
+		</div>	
+			<div class="contenidoNavbar container">
+			  <a class="navbar-brand" href="/">MORTHLET</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+			    <ul class="navbar-nav ">
+				  <li class="nav-item">
+					<a class="nav-link " aria-current="page" href="/">INICIO</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="/">SOBRE MÍ</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="galeria/">GALERÍA</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="/">PROYECTOS</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="/contacto">CONTACTO</a>
+				  </li>
+			    </ul>
+			  </div>
+			</div>
+		</nav>
+	
+		<a href="#arriba" class="regresar-arriba"><img src= "/public/favicon.svg" width="20%"></a>
+
+		
+		<!--Todo lo que aparece de Layout en otros archivos aparecerá aquí (slot)-->
+		<slot />
+
+		<!--SCRIPTS-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+		<script src="/js/Galeria.js" is:inline></script>	
+		<script src="https://kit.fontawesome.com/398b08d3d7.js" crossorigin="anonymous"></script>
+
+		<!--https://www.youtube.com/watch?v=z70GTU3p72I -->
+		<script>
+			const navEl = document.querySelector('.navbar');
+
+			window.addEventListener('scroll', () => {
+				if(window.scrollY >= 56){
+					navEl.classList.add('navbar-scrolled');
+				} else if(window.scrollY < 56){
+					navEl.classList.remove('navbar-scrolled');
+				}
+			});
+		</script>
+
+		<!--Footer-->
+		<footer class="text-center text-white">
+		<!-- Grid container -->
+		<div class="footerContenedor container pt-2">
+		  <!-- Section: Social media -->
+		  <section class="mb-2">
+			<!-- Facebook -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-white m-1"
+			  href="#!"
+			  role="button"
+			  data-mdb-ripple-color="white"
+			  ><i class="fab fa-facebook-f"></i
+			></a>
+	  
+			<!-- Twitter -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-white m-1"
+			  href="#!"
+			  role="button"
+			  data-mdb-ripple-color="white"
+			  ><i class="fab fa-twitter"></i
+			></a>
+	  
+			<!-- Google -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-white m-1"
+			  href="#!"
+			  role="button"
+			  data-mdb-ripple-color="white"
+			  ><i class="fab fa-google"></i
+			></a>
+	  
+			<!-- Instagram -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-white m-1"
+			  href="#!"
+			  role="button"
+			  data-mdb-ripple-color="white"
+			  ><i class="fab fa-instagram"></i
+			></a>
+	  
+			<!-- Linkedin -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-white m-1"
+			  href="#!"
+			  role="button"
+			  data-mdb-ripple-color="white"
+			  ><i class="fab fa-linkedin"></i
+			></a>
+			<!-- Github -->
+			<a
+			  class="btn btn-link btn-floating btn-lg text-white m-1"
+			  href="#!"
+			  role="button"
+			  data-mdb-ripple-color="white"
+			  ><i class="fab fa-github"></i
+			></a>
+		  </section>
+		  <!-- Section: Social media -->
+		</div>
+		<!-- Grid container -->
+	  
+		<!-- Copyright -->
+		<div class="copyright text-center text-white p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+	      morthlet@gmail.com (462) 194 5314 <br>
+		  ©Morthlet 2022. Todos los derechos reservados.
+		</div>
+		</footer>
+
+		<!-- Script necesario para animación AOS -->
+		<script is:inline>
+			AOS.init();
+		  </script>
+	</body>
+</html>

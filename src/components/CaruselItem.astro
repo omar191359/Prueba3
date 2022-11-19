@@ -1,0 +1,15 @@
+---
+export interface Props {
+    fuente: string;
+    imgDescript: string;
+    titulo: string;
+    cuerpo: string;
+}
+
+const { fuente, imgDescript, href, titulo, cuerpo } = Astro.props;
+---
+<img src={fuente} class="d-block w-100" alt={imgDescript}>
+<div class="carousel-caption d-none d-md-block">
+  <h5>{titulo}</h5>
+  <p>{cuerpo}</p>
+</div>

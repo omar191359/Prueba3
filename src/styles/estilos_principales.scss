@@ -1,0 +1,329 @@
+$spacer: 5rem;
+$color1: #1FA9C9;
+$color2: #F9417F;
+
+
+
+//para modificar variables de bootstrap se modifican abajo del código pegado aquí abajo
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//para importar fuentes externas se va a Google Fonts > se selecciona la fuente y se busca linea @import
+//@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300;1,400;1,500&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+//formato para declarar fuentes externas en el siguiente código:
+
+/*
+@font-face{
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+    format("woff");
+    font-weight: 400;
+}
+*/
+
+//todos los estilos que sean propios van debajo
+h1{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+h4{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+h2{
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+}
+h3{
+    color: #F9417F;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;  
+    margin-top: 20px;
+    
+}
+body{
+    //este se puede obtener también de Google Fonts
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+footer{
+    background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
+    //height: 20vh;  
+}
+
+nav{
+    background-image: linear-gradient(#000000,#00000000);
+    transition: all 0.5s;
+    height: 80px;
+}
+
+
+.navbar-nav > li a{
+    color: white; 
+    align-items: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+.navbar-brand{
+    color: white !important;
+    font-size: 30px;
+    letter-spacing: 7px;
+    font-weight: 600;
+}
+.navbar-scrolled{
+    background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
+    opacity: 0.9;
+    height: 55px;
+    padding: 0;
+}
+.nav-link{
+    padding: 0 20px 0 20px;
+}
+.regresar-arriba{
+    text-align: end;
+    position: fixed;
+    z-index: 9999;
+    right: 15px;
+    bottom: 15px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+/*
+.navbar{
+    transition: all 0.5s;
+    height: 80px;
+}
+*/
+
+body::-webkit-scrollbar-track
+{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  
+}
+body::-webkit-scrollbar
+{
+  width: 14px;
+}
+ 
+body::-webkit-scrollbar-thumb
+{
+  
+  box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+  background:  black;
+}
+
+
+
+.principal p{
+    font-size: 18px;
+    font-weight: 1000;
+    letter-spacing: 5px;
+}
+.principal p span{
+    font-weight: 400;
+}
+.banner{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/public/face-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bannerContacto{
+    height: 40vh;
+    width: 100vw;
+    background-image: url(/public/Banner1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*
+.parallax{
+  
+  background-image: url('/public/principal1.png');
+
+  
+  height: 100%; 
+
+ 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+*/
+
+.aboutme{
+	height: auto;
+	background-color: black;
+    align-items: center;
+}
+.aboutme .row{
+    padding-top: 100px;
+}
+#presentacion {
+    color: white;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 0 50px;
+}
+#explicacion {
+    color: white;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 1.3;
+    padding: 0 50px;
+}
+#explicacion span {
+    font-weight: 500;
+}
+
+.gradiente{
+    height: 15px;
+    max-width: 100%;
+    background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
+}
+.gradienteNegro{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    width: 100%;
+    background-image: linear-gradient(#00000000 ,#000000);
+}
+.sobreMi{
+    //padding: 100px;
+    padding-top: 70px;
+    margin: 0px 20px;
+    //padding: 120px 50px 0px 50px;
+    align-items: center;
+}
+.retrato{
+    align-items: center;
+    padding-top: auto;
+    padding-bottom: 100px;
+}
+.botonGaleria{  
+    color: white;
+    padding: 6px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    border: 1px solid white;
+    &:hover{
+        display: inline-block;
+        color: white;
+        border: 1px solid black;
+        background-color: #F9417F;
+        border-radius: 2rem;
+        text-decoration: none;
+        border: 1px solid black;
+    }
+}
+
+.servicios{
+    background-color: #000000;
+    height: auto;
+}
+.infoServicios{
+    padding: 100px 0px 50px 0px ;
+    text-align: center;
+}
+.infoDescargas{
+    padding: 100px 0px 50px 0px ;
+    text-align: center;
+}
+.segundaFila{
+    padding-bottom: 100px;
+}
+
+.col-md-9{
+    padding: 0px 0px 0px 0px;
+}
+.col-md-9 p{
+    font-size: 13px;
+}
+.iconosS{
+    filter: invert(48%) sepia(97%) saturate(387%) hue-rotate(144deg) brightness(98%) contrast(90%);
+    padding: 15px;
+    border: 3px solid white;
+    border-radius: 50px;
+    margin:0;
+}
+/*
+.iconosS:hover{
+    filter: none;
+    background-color: #1FA9C9;
+    padding: 10px;
+    border: 3px solid #1FA9C9;
+    border-radius: 50px;
+    transition-duration: 0.2s;
+    //transition-timing-function: ease-in-out;
+}
+*/
+.elementoS:hover img{
+    filter: none;
+    background-color: #1FA9C9;
+    padding: 5px;
+    border: 3px solid #1FA9C9;
+    border-radius: 50px;
+    transition-duration: 0.2s;
+}
+.elementoS:hover h2{
+    color:#1FA9C9;
+    transition-duration: 0.2s;
+}
+.servicios .row{
+    margin: 20px 5px;
+}
+.descargas{
+    background-color: white;
+    height: auto;
+    color: black;
+}
+.elementoD p{
+    font-size: 13px;
+}
+.descargas h1{
+    color: black;
+}
+/*
+.elementoD .col-md-3{
+    margin-left: 10px;
+}
+*/
+label{
+   color: #000000; 
+}
+.modal-header{
+    color: #000000;
+}
+.modal-body{
+    color: #000000;
+}
