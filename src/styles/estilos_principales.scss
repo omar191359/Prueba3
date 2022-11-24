@@ -1,6 +1,8 @@
 $spacer: 5rem;
 $color1: #1FA9C9;
 $color2: #F9417F;
+$gradiente: linear-gradient(to right, #1FA9C9 , #F9417F);
+$gradienteInvertido: linear-gradient(to left, #1FA9C9 , #F9417F);
 
 
 
@@ -22,20 +24,12 @@ $color2: #F9417F;
 }
 */
 
-//todos los estilos que sean propios van debajo
+// ESTILOS GENERALES
 h1{
     color: white;
     text-align: center;
     font-size: 35px;
     font-weight: 700;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
-}
-h4{
-    color: white;
-    text-align: center;
-    font-size: 35px;
-    font-weight: 600;
     letter-spacing: 5px;
     margin-bottom: 10px;
 }
@@ -51,8 +45,15 @@ h3{
     font-size: 17px;
     font-weight: 600;
     margin: 0;  
-    margin-top: 20px;
-    
+    margin-top: 20px;  
+}
+h4{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
 }
 body{
     //este se puede obtener también de Google Fonts
@@ -60,19 +61,20 @@ body{
     color: white;
     overflow-x: hidden;
 }
-
 footer{
     background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
     //height: 20vh;  
 }
-
 nav{
     background-image: linear-gradient(#000000,#00000000);
     transition: all 0.5s;
     height: 80px;
 }
-
-
+.gradienteNav{
+    height: 15px;
+    max-width: 100%;
+    background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
+}
 .navbar-nav > li a{
     color: white; 
     align-items: center;
@@ -103,32 +105,22 @@ nav{
     transition-duration: 0.5s;
     transition-timing-function: ease-in;
 }
-/*
-.navbar{
-    transition: all 0.5s;
-    height: 80px;
-}
-*/
-
 body::-webkit-scrollbar-track
 {
   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  
 }
 body::-webkit-scrollbar
 {
   width: 14px;
 }
- 
 body::-webkit-scrollbar-thumb
-{
-  
+{ 
   box-shadow: inset 0 0 6px rgba(0,0,0,.5);
   background:  black;
 }
 
 
-
+// PÁGINA DE INDEX
 .principal p{
     font-size: 18px;
     font-weight: 1000;
@@ -137,7 +129,7 @@ body::-webkit-scrollbar-thumb
 .principal p span{
     font-weight: 400;
 }
-.banner{
+.bannerInicio{
     height: 100vh;
     width: 100vw;
     background-image: url(/public/face-bg.jpg);
@@ -145,31 +137,15 @@ body::-webkit-scrollbar-thumb
     background-repeat: no-repeat;
     background-size: cover;
 }
-.bannerContacto{
-    height: 40vh;
-    width: 100vw;
-    background-image: url(/public/Banner1.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+.gradienteNegro{
+    //padding: 0;
+    //margin: 0;
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    width: 100%;
+    background-image: linear-gradient(#00000000 ,#000000);
 }
-
-/*
-.parallax{
-  
-  background-image: url('/public/principal1.png');
-
-  
-  height: 100%; 
-
- 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-*/
-
 .aboutme{
 	height: auto;
 	background-color: black;
@@ -196,21 +172,6 @@ body::-webkit-scrollbar-thumb
 }
 #explicacion span {
     font-weight: 500;
-}
-
-.gradiente{
-    height: 15px;
-    max-width: 100%;
-    background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
-}
-.gradienteNegro{
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    bottom: 0;
-    height: 30vh;
-    width: 100%;
-    background-image: linear-gradient(#00000000 ,#000000);
 }
 .sobreMi{
     //padding: 100px;
@@ -246,7 +207,6 @@ body::-webkit-scrollbar-thumb
         border: 1px solid black;
     }
 }
-
 .servicios{
     background-color: #000000;
     height: auto;
@@ -262,7 +222,6 @@ body::-webkit-scrollbar-thumb
 .segundaFila{
     padding-bottom: 100px;
 }
-
 .col-md-9{
     padding: 0px 0px 0px 0px;
 }
@@ -313,17 +272,87 @@ body::-webkit-scrollbar-thumb
 .descargas h1{
     color: black;
 }
-/*
-.elementoD .col-md-3{
-    margin-left: 10px;
+
+
+// PÁGINA DE CONTACTO
+.contacto{
+    background-color: #000000;
+    padding-left: 0;
+    padding-right: 0;
 }
-*/
+.bannerContacto{
+    height: 30vh;
+    width: 100vw;
+    background-image: url(/public/Banner1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gradienteNegro2{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    height: 30vh;
+    width: 100%;
+    background-image: linear-gradient(#00000000 ,#000000);
+}
 label{
-   color: #000000; 
-}
+    color: white; 
+    font-weight: 500;
+ }
 .modal-header{
-    color: #000000;
-}
+    color: white;
+ }
 .modal-body{
-    color: #000000;
+    color: white;
+ }
+.form-control{
+    background-image: $gradienteInvertido;
+    border: none;
 }
+.infoContacto{
+    padding: 0px ;
+    text-align: center;
+    bottom: 100px;
+    position: relative;
+}
+.logoContacto{
+    bottom: 200px;
+    position: relative;
+}
+#Logotipo2{
+    width: 250px;
+    padding: 0;
+    margin: 0;
+}
+.formulario{
+    position: relative;
+    bottom: 100px;
+}
+.formulario .textarea{
+    height: 800px;
+}
+.botonContacto{  
+    background-color: black;
+    color: white;
+    padding: 6px 42px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    border: 1px solid white;
+    &:hover{
+        display: inline-block;
+        border: 1px solid black;
+        background-color: #F9417F;
+        border-radius: 2rem;
+        text-decoration: none;
+        border: 1px solid black;
+    }
+}
+

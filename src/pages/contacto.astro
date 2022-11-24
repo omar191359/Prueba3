@@ -4,67 +4,76 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Contacto" descripcion="" palabras="">
 	<main>
-	<div class= "row">
-		<div class="bannerContacto"></div>
-		<div class="gradienteNegro"></div>
-	</div>
+	<section class= "principal container-fluid text-center position-relative">
+		<div class= "row">
+			<div class="col-12 bannerContacto"></div>
+			<div class="gradienteNegro2"></div>
+		</div>
+	</section>
 	
-		<!-- SECCIÓN DE FORMULARIO DE CONTACTO  -->
-		<section class="container py-3">
-			<div class="row justify-content-md-center">
-				<div class="col-lg-8 ">
+	<!-- SECCIÓN DE FORMULARIO DE CONTACTO  -->
+	<section class="container-fluid py-3 contacto">
+
+		<!-- Titular e información -->
+		<div class="row justify-content-md-center logoContacto">
+			<img src="/public/logo.png" alt="Imagen de fondo para ejemplo" id="Logotipo2">
+		</div>
+		<div class="infoContacto">
+			<h1>CONTACTO</h1>
+			<p>¿Tienes alguna duda o necesitas alguna cotización?</p>
+		</div>
+			<div class="row justify-content-md-center formulario">
+				<div class="col-md-6 col-lg-6">
 					
 					<form action="/data" id="Formulario" method="get">
 						<div class="my-1">
-							<label for="Nombre">Nombre:</label>
+							<label for="Nombre">Escribe tu nombre completo:</label>
 							<input
 								type="text"
 								name="nombre"
 								class="form-control"
 								id="Nombre"
-								placeholder="Ingresa tu nombre" 
 								required
 							/>
 						</div>
 						<div class="my-1">
-							<label for="Correo">Correo:</label>
+							<label for="Correo">Escribe tu correo electrónico:</label>
 							<input
 								type="email"
 								name="correo"
 								class="form-control"
 								id="Correo"
-								placeholder="Ingresa tu correo de contacto"
 								required
 							/>
 						</div>
 						<div class="mb-1">
-							<label for="Tel">Telefono:</label>
+							<label for="Tel">Escribe tu teléfono:</label>
 							<input
 								type="tel"
 								name="telefono"
 								class="form-control"
 								id="Tel"
-								placeholder="Telefono (no es un campo obligatorio)"
 							/>
 						</div>
 
 						<div class="mb-1">
-							<label for="Mensaje">Mensaje:</label>
+							<label for="Mensaje">Escribe tu mensaje:</label>
 							<textarea
 								name="mensaje"
 								class="form-control"
-								placeholder="Mensaje"
 								id="Mensaje"
 								required></textarea>
 						</div>
 
-						<button type="submit" class="boton" name="enviar">
-							Enviar
-						</button>
+						<div class="col-12 pt-1 text-center">
+							<button type="submit" class="botonContacto" name="enviar">
+								ENVIAR
+							</button>
+						</div>
 					</form>
 				</div>
 			</div>
-		</section>
+	</section>
 
 		<!-- MODAL DE CONFIRMACIÓN -->
 		<div
