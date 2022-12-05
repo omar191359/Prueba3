@@ -1,100 +1,215 @@
-/*
-@media (max-width: 720px){
+$gradiente: linear-gradient(to right, rgba(39,169,201,0.8), rgba(249,65,127,0.8));
+$color1: #1FA9C9;
+$color2: #F9417F;
+$color3: white;
 
-    .navbar-collapse {
-        background-color: white;
-        background-image: none !important;
-    }
-}*/
+$gradienteInvertido: linear-gradient(to left, #1FA9C9 , #F9417F);
+
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) {
-
-    h2{
-        text-align: center;
-    }
-    .principal{
-        height: 80vh;
-    }
-    /*
-    .principal #imagenPrincipal{
-        height: 80vh;
-        width: auto;
-    }
-    */
-
-    .limitado{
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-    .principal #Logotipo{
+@media  (max-width: 991.98px) {
+h2{
+    text-align: center;
+}
+.principal{
+    height: 80vh;
+}
+.navbar-collapse {
+    background-image: $gradiente;
+    border-radius: 0px 20px;
+}
+.navbar-nav > li a {
+    text-align: center;
+}
+.limitado{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.principal #Logotipo{
         width: 40vw;
+}
+.principal p{
+    font-size: 15px;
+    padding: 10% 0;
+}
+.aboutme{
+    height: auto;
+    align-items: center;
+}
+.aboutme .row{
+    padding-top: 40px;
+}
+.retrato{
+    padding-top: 0px;
+    padding-bottom: 40px;
+    align-items: center;
     }
-    .principal p{
-        font-size: 15px;
-        padding: 10% 0;
-    }
-    .aboutme{
-        height: auto;
-        align-items: center;
-    }
-    .aboutme .row{
-        padding-top: 40px;
-    }
-    .retrato{
-        padding-top: 0px;
-        padding-bottom: 40px;
-        align-items: center;
-    }
-    .col-md-9 p{
-        font-size: 13px;
-        text-align: center;
-    }
-    .sobreMi{
-        //padding: 100px;
-        padding: 0;
-        margin: 0;
-        //padding: 120px 50px 0px 50px;
-        align-items: center;
-    }
-    .fraseUno{
-        max-height: 400px;
-    }
-    .servicios{
-        height: auto;
-    }
-    .infoServicios{
-        padding: 60px 0 0 0;
-    }
-    .descargas{
-        height: auto;
-        padding-bottom: 40px;
-    }
-    .infoDescargas{
-        padding: 60px 0 0 0;
-    }
+.col-md-9 p{
+    font-size: 13px;
+    text-align: center;
+}
+.sobreMi{
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.fraseUno{
+    max-height: 400px;
+}
+.fraseDos{
+    max-height: 200px;
+}
+.servicios{
+    height: auto;
+}
+.infoServicios{
+    padding: 60px 0 0 0;
+}
+.descargas{
+    height: auto;
+    padding-bottom: 40px;
+}
+.infoDescargas{
+    padding: 60px 0 0 0;
+}
+.iconosS{
+    filter: invert(48%) sepia(97%) saturate(387%) hue-rotate(144deg) brightness(98%) contrast(90%);
+    padding: 15px;
+    border: 4px solid white;
+    border-radius: 50px;
+    margin:0;
+    width: 20%;
+}
+footer{
+    height: min-content;
+}
+.btn-link{
+    margin: 0 !important
+}
+.copyright{
+    padding: 10px !important;
+    font-size: 12px;
+}
 
-    .iconosS{
-        filter: invert(48%) sepia(97%) saturate(387%) hue-rotate(144deg) brightness(98%) contrast(90%);
-        padding: 15px;
-        border: 4px solid white;
-        border-radius: 50px;
-        margin:0;
-        width: 20%;
-    }
-    footer{
-        height: min-content;
-    }
-    .btn-link{
-        margin: 0 !important
-    }
-    .copyright{
-        padding: 10px !important;
-        font-size: 12px;
-    }
+// PÁGINA DE CONTACTO
+.contacto{
+    background-color: #000000;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    bottom: 10px;
+}
+.contacto .row{
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+.bannerContacto{
+    height: 20vh;
+    width: 100vw;
+}
+
+.gradienteNegro2{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    height: 20vh;
+    width: cover;
+    background-image: linear-gradient(#00000000 ,#000000);
+}
+.logoContacto{
+    bottom: 130px;
+    position: relative;
+}
+#Logotipo2{
+    width: 100px;
+}
+.formulario{
+    padding: 0px 40px;
+    position: relative;
+    bottom: 100px;
+}
+
+// PÁGINA DE GALERÍA
+.bannerGaleria{
+    height: 20vh;
+    width: 100vw;
+}
+
+// PÁGINA DE SOBRE MÍ
+#paginaSobremi{
+    overflow-x: hidden;
+    padding: 0;
+}
+.bannerSobremi{
+    height: 20vh;
+    background-size: 100%;
+}
+.InfosobreMi{
+    padding: 0px 30px 80px 30px;
+}
+.sobreMiExtendido{
+    padding: 0px 0px 50px 0px;
+}
+#sobreMi{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sobreMiExtendido p{
+    text-align: center;
+}
+#habilidades{
+    text-align: center;
+    margin-bottom: 30px;
+ }
+.habilidades{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.habilidades p{
+    text-align: center;
+}
+.testimonios{
+    display: none;
+}
+.testimoniosMobil{
+    display: block;
+    padding: 50px 0px;
+}
+#testimoniosMobil{
+    color: #000000;
+    margin-bottom: 50px;
+}
+.gradienteTes2{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 38%;
+  left: 50%;
+  background-image: $gradienteInvertido;
+  width: 100%;
+  height: 50px;
+  margin: 0px;
+}
+.gradienteTes2 p{
+  padding: 0px;
+  margin: 0px;
+  opacity: 0%;;
+}
+.curriculum{
+    padding: 50px 30px;
+}
+#demo{
+    text-align: center !important;
+}
+#cv{
+    text-align: center !important;
+}
+  
 
 }
+
 
 
 
@@ -116,18 +231,3 @@
 
 // XX-Large devices (larger desktops, 1400px and up)
 //@media (min-width: 1400px) { ... }
-
-
-
-/*
-
-@media(max-width: 720px){
-    body{
-      background-size: 100% 100%;
-    }
-    .navbar-collapse{
-      background-image: linear-gradient(#000000,#00000000);
-  }
-  }
-
-  */

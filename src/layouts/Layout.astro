@@ -22,20 +22,30 @@ const { title, palabras, descripcion } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/icons/favicon1.ico" />
+		<link rel="icon" sizes="any" href="favicon.ico" type="image/x-icon">
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={descripcion} />
 		<meta name="keywords" content={palabras} />
 		<meta name="author" content="Omar" />
 		<title>{title}</title>
 		<script src="https://kit.fontawesome.com/398b08d3d7.js" crossorigin="anonymous"></script>
-
+		
 		<!--Opción AOS para animaciones al scrollear x-icon  svg+xml-->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
 
+		<!--Esto estaba antes en Galería-->
+		<link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+		<link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+		<link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
+		<link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<!-- Template Main CSS File -->
+  		<link href="src/styles/style.css" rel="stylesheet">
+		<!--Termina lo que estaba antes en Galería-->
+
 		<script is:inline>
-			AOS.init({disable: 'mobile'});
+			AOS.init({
+				disable: 'mobile'});
 	  	</script>
 
 	  	<script is:inline>
@@ -45,15 +55,14 @@ const { title, palabras, descripcion } = Astro.props;
 			  return window.innerWidth < maxWidth;
 			}
 		  });
-	  </script>
-	  
+	    </script>
+
 	</head>
 
 	<!--Body-->
 	<body>	
 		
-		<!--NavBar-->
-			
+		<!--NavBar-->	
 		<nav class="navbar navbar-expand-sm position-fixed sticky-top container-fluid" >
 	    <div class="gradienteNav position-fixed sticky-top container-fluid"></div>
 
@@ -68,10 +77,10 @@ const { title, palabras, descripcion } = Astro.props;
 					<a class="nav-link " aria-current="page" href="/">INICIO</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" aria-current="page" href="/">SOBRE MÍ</a>
+					<a class="nav-link" aria-current="page" href="/sobremi">SOBRE MÍ</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="galeria/">GALERÍA</a>
+					<a class="nav-link" href="/galeria">GALERÍA</a>
 				  </li>
 				  <li class="nav-item">
 					<a class="nav-link" aria-current="page" href="/">PROYECTOS</a>
@@ -83,8 +92,19 @@ const { title, palabras, descripcion } = Astro.props;
 			  </div>
 			</div>
 		</nav>
+
+		<!--<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 	
-		<a href="#arriba" class="regresar-arriba"><img src= "/public/favicon.svg" width="20%"></a>
+		<!--<a href="#arriba" class="regresar-arriba"><img src= "/public/favicon.svg" width="20%"></a>-->
+
+		<!-- Back to top button -->
+		<button
+		type="button"
+		class="btn btn-danger btn-floating btn-lg"
+		id="btn-back-to-top"
+		>
+		<i class="fas fa-arrow-up"></i>
+		</button>
 
 		
 		<!--Todo lo que aparece de Layout en otros archivos aparecerá aquí (slot)-->
@@ -94,6 +114,9 @@ const { title, palabras, descripcion } = Astro.props;
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 		<script src="/js/Galeria.js" is:inline></script>	
 		<script src="https://kit.fontawesome.com/398b08d3d7.js" crossorigin="anonymous"></script>
+
+		<!--Botón regresar arriba-->
+		<script src="/public/js/regresarArriba.js" crossorigin="anonymous"></script>
 
 		<!--https://www.youtube.com/watch?v=z70GTU3p72I -->
 		<script>

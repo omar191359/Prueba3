@@ -25,7 +25,30 @@ $gradienteInvertido: linear-gradient(to left, #1FA9C9 , #F9417F);
 }
 */
 
-// ESTILOS GENERALES
+
+/*--------------------------------------------------------------
+# Back to Top
+--------------------------------------------------------------*/
+#btn-back-to-top {
+  background-color: $color2;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: none;
+  stroke: none;
+  border: none;
+  transition: all 0.5s ease 0s;
+  scroll-behavior: smooth!important;
+    &:hover{
+        background-color: $color1;
+        text-decoration: none;
+    }
+}
+
+/*--------------------------------------------------------------
+# ESTILOS GENERALES
+--------------------------------------------------------------*/
 h1{
     color: white;
     text-align: center;
@@ -56,15 +79,17 @@ h4{
     letter-spacing: 5px;
     margin-bottom: 10px;
 }
+h5{
+  margin-bottom: 0;
+  text-align: end;
+}
 body{
-    //este se puede obtener también de Google Fonts
     font-family: 'Poppins', sans-serif;
     color: white;
     overflow-x: hidden;
 }
 footer{
-    background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
-    //height: 20vh;  
+    background-image: linear-gradient(to right, #1FA9C9 , #F9417F); 
 }
 nav{
     background-image: linear-gradient(#000000,#00000000);
@@ -97,15 +122,6 @@ nav{
 .nav-link{
     padding: 0 20px 0 20px;
 }
-.regresar-arriba{
-    text-align: end;
-    position: fixed;
-    z-index: 9999;
-    right: 15px;
-    bottom: 15px;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
-}
 body::-webkit-scrollbar-track
 {
   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -120,8 +136,9 @@ body::-webkit-scrollbar-thumb
   background:  black;
 }
 
-
-// PÁGINA DE INDEX
+/*--------------------------------------------------------------
+# PÁGINA DE INDEX
+--------------------------------------------------------------*/
 .principal p{
     font-size: 18px;
     font-weight: 1000;
@@ -139,8 +156,6 @@ body::-webkit-scrollbar-thumb
     background-size: cover;
 }
 .gradienteNegro{
-    //padding: 0;
-    //margin: 0;
     position: absolute;
     bottom: 0;
     height: 30vh;
@@ -175,10 +190,8 @@ body::-webkit-scrollbar-thumb
     font-weight: 500;
 }
 .sobreMi{
-    //padding: 100px;
     padding-top: 70px;
     margin: 0px 20px;
-    //padding: 120px 50px 0px 50px;
     align-items: center;
 }
 .retrato{
@@ -211,6 +224,7 @@ body::-webkit-scrollbar-thumb
 .servicios{
     background-color: #000000;
     height: auto;
+    padding-bottom: 50px;
 }
 .infoServicios{
     padding: 100px 0px 50px 0px ;
@@ -236,17 +250,6 @@ body::-webkit-scrollbar-thumb
     border-radius: 50px;
     margin:0;
 }
-/*
-.iconosS:hover{
-    filter: none;
-    background-color: #1FA9C9;
-    padding: 10px;
-    border: 3px solid #1FA9C9;
-    border-radius: 50px;
-    transition-duration: 0.2s;
-    //transition-timing-function: ease-in-out;
-}
-*/
 .elementoS:hover img{
     filter: none;
     background-color: #1FA9C9;
@@ -274,8 +277,9 @@ body::-webkit-scrollbar-thumb
     color: black;
 }
 
-
-// PÁGINA DE CONTACTO
+/*--------------------------------------------------------------
+# PÁGINA DE CONTACTO
+--------------------------------------------------------------*/
 .contacto{
     background-color: #000000;
     padding-left: 0;
@@ -284,7 +288,7 @@ body::-webkit-scrollbar-thumb
 .bannerContacto{
     height: 30vh;
     width: 100vw;
-    background-image: url(/Banner1.jpg);
+    background-image: url(/Banner5.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -300,6 +304,7 @@ body::-webkit-scrollbar-thumb
 label{
     color: white; 
     font-weight: 500;
+    text-align: center;
  }
 .modal-header{
     color: white;
@@ -354,14 +359,276 @@ label{
         border-radius: 2rem;
         text-decoration: none;
         border: 1px solid black;
-    }
+    }    
+}
+
+/*--------------------------------------------------------------
+# PÁGINA DE GALERÍA
+--------------------------------------------------------------*/
+.bannerGaleria{
+    height: 30vh;
+    width: 100vw;
+    background-image: url(/Banner2.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fraseDos{
+  background-color: #000000;
+  height: 70vh;
+}
+.portafolio{
+    background-color: #000000;
+}
+.carrusel{
+    max-width: 85vw;
+}
+.infoGaleria{
+    color: #000000;
+    padding: 100px 50px 0px 50px;
+    text-align: center;
+    position: relative;
+}
+.infoGaleria h1{
+    color: #000000!important;
+}
+.portfolio{
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+.extra{
+    background-color: #000000;
+    height: auto;
+    padding-bottom: 50px;
+}
+.iconosE{
+  filter: invert(37%) sepia(90%) saturate(5504%) hue-rotate(314deg) brightness(97%) contrast(102%);
+  padding: 15px;
+  border: 3px solid white;
+  border-radius: 50px;
+  margin:0;
+}
+.elementoE:hover img{
+  filter: none;
+  background-color: #F9417F;
+  padding: 5px;
+  border: 3px solid #F9417F;
+  border-radius: 50px;
+  transition-duration: 0.2s;
+}
+.elementoE:hover h2{
+  color: #F9417F;
+  transition-duration: 0.2s;
+}
+.serviciosExtra{
+  background-color: #000000;
+}
+.serviciosExtra .row{
+  margin: 20px 5px;
 }
 
 
+/*--------------------------------------------------------------
+# PÁGINA DE SOBRE MÍ
+--------------------------------------------------------------*/
+.bannerSobremi{
+  height: 30vh;
+  width: 100vw;
+  background-image: url(/Banner1.webp);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.InfosobreMi{
+  background-color: black;
+  width: auto;
+  margin: 0;
+  padding: 100px 0px;
+}
+#sobreMi{
+  text-align: start;
+}
+.sobreMiExtendido{
+  padding-right: 50px;
+}
+.sobreMiExtendido p{
+  text-align: start;
+  margin-bottom: 0px;
+}
+#habilidades{
+  text-align: end;
+}
+.habilidades{
+  padding-left: 50px;
+}
+.habilidades p{
+  text-align: end;
+}
+.barraProgreso{
+  background-color: white;
+  z-index: 500;
+  padding: 0px;;
+}
+.barraProgreso p{
+  padding: 0px;
+  margin: 0px;
+  opacity: 0%;;
+}
+.rellenoProgresoPs{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoPs;
+  animation-duration: 7s;
+}
+@keyframes rellenoPs{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 90%;
+  }
+}
+.rellenoProgresoAi{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoAi;
+  animation-duration: 7s;
+}
+@keyframes rellenoAi{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.rellenoProgresoPr{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoPr;
+  animation-duration: 7s;
+}
+@keyframes rellenoPr{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+}
+.rellenoProgresoAe{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoAe;
+  animation-duration: 7s;
+}
+@keyframes rellenoAe{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 75%;
+  }
+}
+.rellenoProgresoBlender{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoBlender;
+  animation-duration: 7s;
+}
+@keyframes rellenoBlender{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 60%;
+  }
+}
+.rellenoProgresoMaya{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoMaya;
+  animation-duration: 7s;
+}
+@keyframes rellenoMaya{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+}
+//Sección de Testimonios
+.carousel .carousel-indicators button {
+ width: 15px;
+ height: 15px;
+ border-radius: 100%;
+ margin: 0px 10px;
+}
+.infoTestimonios h1{
+  z-index: 999;
+  color: #000000;
+  padding-top: 100px;
+}
+.gradienteTes{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: $gradienteInvertido;
+  width: 100%;
+  height: 100px;
+  margin: 0px;
+}
+.gradienteTes p{
+  padding: 0px;
+  margin: 0px;
+  opacity: 0%;;
+}
+.imagenTes{
+  z-index: 999;
+}
+.testimonios{
+  width: auto;
+  padding: 50px 0px 100px 0px;
+  position: relative;
+}
+.testimonios h5{
+  font-weight: 700;
+}
+.testimoniosMobil{
+  display: none;
+}
+//Sección CV
+.curriculum{
+  background-color: #000000;
+  height: auto;
+  padding: 100px 0px;
+}
+#demo{
+  text-align: start;
+}
+#cv{
+  text-align: end;
+}
 
+/*--------------------------------------------------------------
+# DESACTIVAR ANIMACIONES AOS EN DISPOSITIVOS MOBILES 1
+--------------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
     .aos-animate {
-  
       -o-transition-property: none !important;
       -moz-transition-property: none !important;
       -ms-transition-property: none !important;
@@ -381,7 +648,6 @@ label{
       animation: none !important;
     }
   }
-
   @media only screen and (max-width : 768px) {
     .animated {
         /*CSS transitions*/
@@ -404,4 +670,143 @@ label{
         animation: none !important;
     }
 }
+/*--------------------------------------------------------------
+# DESACTIVAR ANIMACIONES AOS EN DISPOSITIVOS MOBILES 2
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+   [data-aos-delay] {
+     transition-delay: 0 !important;
+   }
+  }
+  
+  /*--------------------------------------------------------------
+  # ESTILOS GALERÍA COMPLEJA (Presento)
+  --------------------------------------------------------------*/
+  .portfolio .portfolio-item {
+    margin-bottom: 30px;
+  }
+  .portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+  }
+  .portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px 15px 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #444444;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    color: #fff;
+    background: $color1!important;
+  }
+  .portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+  }
+  .portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(17, 17, 17, 0.6);
+  }
+  .portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(17, 17, 17, 0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+  }
+  .portfolio .portfolio-wrap img {
+    transition: all ease-in-out 0.3s;
+  }
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .portfolio .portfolio-wrap .portfolio-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+  }
+  .portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+  }
+  .portfolio .portfolio-wrap .portfolio-links a {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 5px 0 0;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  .portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #fff;
+  }
+  .portfolio .portfolio-wrap:hover::before {
+    opacity: 1;
+  }
+  .portfolio .portfolio-wrap:hover img {
+    transform: scale(1.2);
+  }
+  .portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+  }
+  
+  /*--------------------------------------------------------------
+  # Animaciones cargando
+  --------------------------------------------------------------*/
+  @-webkit-keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
 
